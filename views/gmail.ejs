@@ -1,0 +1,17 @@
+<%layout('/layouts/main') %> 
+     <div class="col-4 offset-1" novalidate class="validation-form">
+    <form action="/gmail" method="POST">
+        <div class="mb-3">
+        <label for="name" class="form-label">ENTER UR NAME</label> 
+        <input type="text" class="form-control" name="name" id="name" required> 
+        <div class="valid-feedback">looks good</div>
+       </div>
+       <div class="mb-3">
+        <label for="mail"class="form-label">ENTER GMAIL</label>
+            <input type="email" class="form-control" name="gmail" id="mail" required>
+            <div class="valid-feedback">looks good</div>
+          </div>  
+        <button class="btn btn-outline-success">submit</button>
+      </div>  
+    </form>
+    </div>

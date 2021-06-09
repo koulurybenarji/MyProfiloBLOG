@@ -1,0 +1,25 @@
+<%layout('/layouts/main')%> 
+<div class="row">
+    <h1 class="text-center">Edit Article</h1>
+        <div class="col-6 offset-3">
+            <form action="/article/<%=article._id%>?_method=PUT" method="POST" novalidate class="validation-form">
+                <div class="mb-3">
+                    <label class="form-label" for="title">Title</label>
+                    <input class="form-control" type="text" name="article[title]" value="<%=article.title%>">
+
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="link">Image Url</label>
+                    <input class="form-control" type="text" name="article[link]" id="link" value="<%=article.link%>">
+                </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="description">Description </label>
+                    <textarea class="form-control" type="text" name="article[Description]"  id="description"><%=article.Description%></textarea>
+                </div>
+                <button class="btn btn-success mb-3">UPDATE article</button>
+            </form>
+
+                <a class="btn btn-outline-warning "href="/articles"> ALL articles</a>
+        
+        </div>

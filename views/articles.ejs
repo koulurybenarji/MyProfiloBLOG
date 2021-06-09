@@ -1,0 +1,14 @@
+<%layout('/layouts/main')%> 
+<%for(let article of articles){%>
+<div class="card " mb-3>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title"><%=article.title%> </h5>
+        <a href="<%=article.link%> ">link of the article</a>
+        <p class="card-text"><%=article.Description%></p>
+      </div>
+      </div>
+    </div>
+    <button><a href="/article/<%=article._id%>/edit" class="btn btn-primary">Edit Article</a></button>
+  <form action="/article/<%=article._id%>?_method=DELETE" method="POST"><button>Delete</button></form>
+<%}%>   
